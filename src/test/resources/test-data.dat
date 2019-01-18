@@ -1,3 +1,26 @@
+MOVE
+LEFT
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+
 PLACE 0,1,NORTH
 MOVE
 LEFT
+ASSERT-POS:0,2,WEST
+controller.run(line);
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+
+
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+sdad   kasmdkasjd ladjdlkajld sds7*&@* @(@*@()*)*) 29080928 oijdia09adadu0sud9y^57sbdndas n
+ASSERT-POS:0,2,WEST
+MOVE
+RIGHT
+ASSERT-POS:0,2,NORTH
+MOVE
+ASSERT-POS:0,3,NORTH
+REPORT
+
+

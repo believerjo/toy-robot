@@ -7,6 +7,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * Test the controller class
  */
@@ -14,9 +18,6 @@ import org.junit.rules.ExpectedException;
 public class ControllerTest {
 
   private Controller controller;
-
-  @Rule
-  public final ExpectedException exception = ExpectedException.none();
 
   @Before
   public void setup() {
@@ -125,5 +126,37 @@ public class ControllerTest {
     Assert.assertEquals(2, controller.getRobot().getLocation().getX());
     Assert.assertEquals(2, controller.getRobot().getLocation().getY());
     Assert.assertEquals(Direction.NORTH, controller.getRobot().getLocation().getDirection());
+  }
+
+  @Test
+  public void testInputFile() {
+    // read test from file
+    File file = new File(getClass().getClassLoader().getResource("test-data.dat").getFile());
+
+    Scanner scanner = null;
+    try {
+      scanner = new Scanner(file);
+
+      while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+
+        try {
+          if (line.startsWith("ASSERT-POS:")) {
+            Assert.assertEquals(line.split(":")[1], controller.getRobot().report());
+          } else {
+            controller.run(line);
+          }
+        } catch (ToyRobotAppException e) {
+          System.out.println(e.getMessage());
+        }
+      }
+
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } finally {
+      if (scanner != null) {
+        scanner.close();
+      }
+    }
   }
 }

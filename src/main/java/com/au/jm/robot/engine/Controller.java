@@ -8,7 +8,7 @@ public class Controller {
   private Board board;
   private Robot robot;
 
-  private static final String INVALID_COMMAND = "That was an invalid command. Enter a valid command";
+  private static final String INVALID_COMMAND = "Invalid command";
   private static final String EXIT_MESSAGE = "Exiting... See you later";
 
   public Controller(Board board, Robot robot) {
