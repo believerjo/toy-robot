@@ -1,4 +1,4 @@
-package com.au.jm.robot.engine.enums;
+package com.au.jm.robot.engine;
 
 import java.util.stream.Stream;
 
@@ -18,15 +18,19 @@ public enum Direction {
     this.right = right;
   }
 
-  static Direction lookUp(int id) {
+  public static Direction lookUpById(int id) {
     return Stream.of(Direction.values()).filter(direction -> direction.id == id).findFirst().orElse(null);
   }
 
+  public static Direction lookUpByName(String name) {
+    return Stream.of(Direction.values()).filter(direction -> direction.name().equalsIgnoreCase(name)).findFirst().orElse(null);
+  }
+
   public static Direction leftOf(Direction input) {
-    return lookUp(input.left);
+    return lookUpById(input.left);
   }
 
   public static Direction rightOf(Direction input) {
-    return lookUp(input.right);
+    return lookUpById(input.right);
   }
 }

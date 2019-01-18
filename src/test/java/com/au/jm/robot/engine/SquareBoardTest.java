@@ -1,6 +1,5 @@
 package com.au.jm.robot.engine;
 
-import com.au.jm.robot.engine.enums.Direction;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,12 +34,16 @@ public class SquareBoardTest {
     location = new Location(0, 0, Direction.EAST);
     Assert.assertTrue(squareBoard.isValidLocation(location));
 
+    // Valid location
+    location = new Location(4, 1, Direction.EAST);
+    Assert.assertTrue(squareBoard.isValidLocation(location));
+
     // Invalid location
-    location = new Location(2, 6, Direction.EAST);
+    location = new Location(2, 5, Direction.EAST);
     Assert.assertFalse(squareBoard.isValidLocation(location));
 
     // Invalid location
-    location = new Location(6,2, Direction.NORTH);
+    location = new Location(5,2, Direction.NORTH);
     Assert.assertFalse(squareBoard.isValidLocation(location));
 
     // Invalid location

@@ -1,12 +1,10 @@
 package com.au.jm.robot.engine;
 
-import com.au.jm.robot.engine.enums.Direction;
+import com.au.jm.robot.engine.utils.Constants;
 
 public class Robot {
 
   private Location location;
-
-  protected static final String REPORT_TEXT = "Toy Robot is currently at (X, Y, ORIENTATION) : ";
 
   /**
    * Place the robot in a valid position
@@ -21,19 +19,21 @@ public class Robot {
    * Move the robot one step in its current direction
    */
   public void move() {
-    switch (location.direction) {
-      case NORTH:
-        location.x++;
-        break;
-      case EAST:
-        location.y++;
-        break;
-      case SOUTH:
-        location.x--;
-        break;
-      case WEST:
-        location.y--;
-        break;
+    if (location != null) {
+      switch (location.direction) {
+        case NORTH:
+          location.y++;
+          break;
+        case EAST:
+          location.x++;
+          break;
+        case SOUTH:
+          location.y--;
+          break;
+        case WEST:
+          location.x--;
+          break;
+      }
     }
   }
 
@@ -41,14 +41,18 @@ public class Robot {
    * Shift the orientation of robot to the left
    */
   public void left() {
-    location.direction = Direction.leftOf(location.direction);
+    if (location != null) {
+      location.direction = Direction.leftOf(location.direction);
+    }
   }
 
   /**
    * Shift the orientation of robot to the right
    */
   public void right() {
-    location.direction = Direction.rightOf(location.direction);
+    if (location != null) {
+      location.direction = Direction.rightOf(location.direction);
+    }
   }
 
   /**
@@ -57,12 +61,15 @@ public class Robot {
    * @return report text
    */
   public String report() {
-    return toString();
-  }
-
-  @Override
-  public String toString() {
-    return new StringBuilder(REPORT_TEXT).append(location.x).append(", ").append(location.y).append(", ").append(location.direction.name()).toString();
+    if (location == null) {
+      return Constants.EMPTY_STRING;
+    }
+    return new StringBuffer(Constants.EMPTY_STRING)
+            .append(location.x)
+            .append(Constants.COMMA)
+            .append(location.y)
+            .append(Constants.COMMA)
+            .append(location.direction.name()).toString();
   }
 
   public Location getLocation() {
