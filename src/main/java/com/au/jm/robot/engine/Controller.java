@@ -66,6 +66,9 @@ public class Controller {
           System.out.println(robot.report());
         }
         break;
+
+      default:
+        throw new ToyRobotAppException(INVALID_COMMAND);
     }
     return true;
   }

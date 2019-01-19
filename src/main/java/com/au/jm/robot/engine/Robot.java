@@ -33,6 +33,7 @@ public class Robot {
         case WEST:
           location.x--;
           break;
+        default:
       }
     }
   }
