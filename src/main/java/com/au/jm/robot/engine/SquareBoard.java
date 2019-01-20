@@ -1,5 +1,8 @@
 package com.au.jm.robot.engine;
 
+/**
+ * The SquareBoard class
+ */
 public class SquareBoard implements Board {
 
   private int rows;
