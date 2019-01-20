@@ -3,6 +3,9 @@ package com.au.jm.robot.engine;
 import com.au.jm.robot.engine.exception.ToyRobotAppException;
 import com.au.jm.robot.engine.utils.Constants;
 
+/**
+ * The Game Controller
+ */
 public class Controller {
 
   private Board board;
