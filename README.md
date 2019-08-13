@@ -7,7 +7,7 @@ Description
 - There are no other obstructions on the table surface.
 - The robot is free to roam around the surface of the table. Any   movement that would result in the robot falling from the table will be ignore, however further valid movement commands are still allowed.
 
-The simulator that can read in commands of the following (textual) form:
+The simulator can read in commands of the following (textual) form:
 
     PLACE X,Y,F
     MOVE
