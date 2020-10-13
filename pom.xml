@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jacoco.version>0.7.5.201505241946</jacoco.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <mockito.version>2.23.4</mockito.version>
         <compliler.plugin.version>3.6.1</compliler.plugin.version>
         <surefire.plugin.version>3.0.0-M3</surefire.plugin.version>
